@@ -10,5 +10,7 @@
 
 @interface DetalleProductoViewController : UITableViewController
 - (IBAction)back:(UIBarButtonItem *)sender;
+- (IBAction)controlStock:(id)sender;
+
 
 @end

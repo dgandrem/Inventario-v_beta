@@ -56,14 +56,23 @@
         <!--Categorias View Controller - Lista de Categorias-->
         <scene sceneID="THe-z8-l34">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaa-p9-toJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="R7K-xX-ZPt" customClass="CategoriasViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9SK-7L-OWa">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="DDr-hq-OxY">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="R7K-xX-ZPt" id="3xG-Mi-adQ"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="D22-g5-Q88" detailTextLabel="Xit-W1-16i" style="IBUITableViewCellStyleSubtitle" id="b3H-Ga-U2a">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -89,14 +98,31 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista de Categorias" id="7Jf-Tw-Vnr">
+                        <barButtonItem key="leftBarButtonItem" tag="1000" title="Edit" id="NJp-A7-EvM">
+                            <connections>
+                                <action selector="edit:" destination="R7K-xX-ZPt" id="oOM-0c-ACU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="cLA-FA-Ff6">
                             <connections>
                                 <segue destination="992-CH-lEF" kind="modal" identifier="AddCategoria" id="JSA-rZ-pEC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="bpb-3D-ebq" id="hRK-Sq-seB"/>
+                        <segue destination="992-CH-lEF" kind="modal" identifier="EditCategoria" id="LKh-Xh-Hdp"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iaa-p9-toJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bpb-3D-ebq">
+                    <connections>
+                        <outlet property="delegate" destination="R7K-xX-ZPt" id="5kH-3F-xPu"/>
+                        <outlet property="searchBar" destination="DDr-hq-OxY" id="Q4a-It-yb5"/>
+                        <outlet property="searchContentsController" destination="R7K-xX-ZPt" id="61N-Be-k5k"/>
+                        <outlet property="searchResultsDataSource" destination="R7K-xX-ZPt" id="wcG-ee-0Pt"/>
+                        <outlet property="searchResultsDelegate" destination="R7K-xX-ZPt" id="j9c-46-xee"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1500" y="74"/>
         </scene>
@@ -177,6 +203,7 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Nombre Categoría" id="0nA-CS-fN2">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="s2f-KQ-5vC">
                             <connections>
@@ -213,9 +240,17 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Eyp-Fw-7wL">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="9N6-cv-FzH" id="Vsh-hN-QVw"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="gV9-sG-x3N" style="IBUITableViewCellStyleDefault" id="e37-0M-PqI">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -249,8 +284,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="GXd-8I-NBt" id="GV4-N3-ClZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ol-CV-6ud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="GXd-8I-NBt">
+                    <connections>
+                        <outlet property="delegate" destination="9N6-cv-FzH" id="yZ9-fh-izk"/>
+                        <outlet property="searchBar" destination="Eyp-Fw-7wL" id="OeC-xt-lgb"/>
+                        <outlet property="searchContentsController" destination="9N6-cv-FzH" id="WTb-JW-Ef6"/>
+                        <outlet property="searchResultsDataSource" destination="9N6-cv-FzH" id="hM8-zM-bpG"/>
+                        <outlet property="searchResultsDelegate" destination="9N6-cv-FzH" id="Dk7-oo-a78"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2481" y="74"/>
         </scene>
@@ -329,7 +376,7 @@
                                                         <constraint firstAttribute="width" constant="300" id="6v6-na-mrg"/>
                                                         <constraint firstAttribute="height" constant="98" id="V89-2v-fZM"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -416,6 +463,9 @@
                                 <segment title="Manual"/>
                                 <segment title="+"/>
                             </segments>
+                            <connections>
+                                <action selector="controlStock:" destination="GAY-oR-gqt" eventType="valueChanged" id="cje-SU-1pa"/>
+                            </connections>
                         </segmentedControl>
                         <sections>
                             <tableViewSection id="LXe-Fg-6gf">
@@ -458,7 +508,7 @@
                                                         <constraint firstAttribute="height" constant="85" id="RU6-lC-GBJ"/>
                                                         <constraint firstAttribute="width" constant="300" id="xFm-Ws-DkW"/>
                                                     </constraints>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -474,12 +524,19 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Stock" id="Re9-bC-OT1">
                                 <cells>
-                                    <tableViewCell contentMode="scaleAspectFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tR3-Ow-Ucw">
+                                    <tableViewCell contentMode="scaleAspectFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="WgM-yP-waH" style="IBUITableViewCellStyleDefault" id="tR3-Ow-Ucw">
                                         <rect key="frame" x="0.0" y="412" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-yP-waH">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
@@ -568,47 +625,13 @@
             <point key="canvasLocation" x="-19" y="74"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CategoriasViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoriasViewController.h"/>
-        </class>
-        <class className="DetalleProductoViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetalleProductoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="Edit_AddCategoriaViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Edit_AddCategoriaViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="Edit_AddProductoViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Edit_AddProductoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ProductosViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProductosViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="back:" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hVr-8l-KMl"/>
+        <segue reference="50t-HR-7Po"/>
+        <segue reference="LKh-Xh-Hdp"/>
     </inferredMetricsTieBreakers>
 </document>

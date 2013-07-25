@@ -12,5 +12,9 @@
 
 @property NSMutableDictionary *ejemplo;
 @property NSMutableArray *keys;
+@property BOOL isEditting;
+
+- (IBAction)edit:(UIBarButtonItem *)sender;
+
 
 @end

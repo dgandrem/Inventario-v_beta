@@ -110,4 +110,35 @@
 - (IBAction)back:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)controlStock:(id)sender {
+    UISegmentedControl *controlador = (UISegmentedControl *) sender;
+    //[controlador setSelectedSegmentIndex:UISegmentedControlNoSegment];
+    NSString *titulo;
+    if( [controlador selectedSegmentIndex] == 0)
+    {
+        titulo = @"Unidades a disminuir:\n\n";
+    }
+    else if([controlador selectedSegmentIndex ] == 1)
+    {
+        titulo = @"Cambiar valor de Stock a:\n\n";
+    }
+    else if([controlador selectedSegmentIndex ] == 2)
+    {
+        titulo = @"Unidades a aumentar:\n\n";
+    }
+    
+    UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:titulo
+                                                          message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(12.0, 45.0, 260.0, 25.0)];
+    //myTextField.delegate = self;
+    [myTextField setTag:1000];
+    [myTextField setKeyboardType:UIKeyboardTypeNumberPad];
+    [myTextField setBackgroundColor:[UIColor whiteColor]];
+    [myTextField setBorderStyle:UITextBorderStyleRoundedRect];
+    [myAlertView addSubview:myTextField];
+    [myAlertView show];
+}
+
+
 @end
