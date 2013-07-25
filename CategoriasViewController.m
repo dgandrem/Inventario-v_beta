@@ -8,6 +8,7 @@
 
 #import "CategoriasViewController.h"
 #import "ProductosViewController.h"
+#import "Edit-AddCategoriaViewController.h"
 
 @interface CategoriasViewController ()
 
@@ -71,13 +72,15 @@ shouldReloadTableForSearchString:(NSString *)searchString
     {
         [self edit: self.navigationItem.leftBarButtonItem];
     }
+    UINavigationController *dest = [segue destinationViewController];
+    UITableViewCell *cell = (UITableViewCell*) sender;
+    int row = cell.tag;
     
     if([segue.identifier isEqualToString:@"llamarListaProductos"])
     {
-        UINavigationController *dest = [segue destinationViewController];
+        
         ProductosViewController *ctrl = [[dest viewControllers] objectAtIndex:0];
-        UITableViewCell *cell = (UITableViewCell*) sender;
-        int row = cell.tag;
+        
         
         if([self.searchDisplayController isActive])
         {
@@ -91,11 +94,13 @@ shouldReloadTableForSearchString:(NSString *)searchString
         
         
     }
-    else if([segue.identifier isEqualToString:@"addCategoria"])
+    else if([segue.identifier isEqualToString:@"AddCategoria"])
     {
+        Edit_AddCategoriaViewController* ctrl = [[dest viewControllers] objectAtIndex:0];
+        ctrl.llamada = @"Add";
         
     }
-    else if([segue.identifier isEqualToString:@"editCategoria"])
+    else if([segue.identifier isEqualToString:@"EditCategoria"])
     {
         
     }

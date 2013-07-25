@@ -22,6 +22,12 @@
 		D44F906817A0850D00BEA9DF /* CategoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906717A0850D00BEA9DF /* CategoriasViewController.m */; };
 		D44F906B17A0865B00BEA9DF /* ProductosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906A17A0865B00BEA9DF /* ProductosViewController.m */; };
 		D44F906E17A0867100BEA9DF /* DetalleProductoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906D17A0867100BEA9DF /* DetalleProductoViewController.m */; };
+		D48AE7D617A1E0D800BBDDC3 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D48AE7D017A1E0D800BBDDC3 /* greenButton.png */; };
+		D48AE7D717A1E0D800BBDDC3 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48AE7D117A1E0D800BBDDC3 /* greenButton@2x.png */; };
+		D48AE7D817A1E0D800BBDDC3 /* plainButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D48AE7D217A1E0D800BBDDC3 /* plainButton.png */; };
+		D48AE7D917A1E0D800BBDDC3 /* plainButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48AE7D317A1E0D800BBDDC3 /* plainButton@2x.png */; };
+		D48AE7DA17A1E0D800BBDDC3 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D48AE7D417A1E0D800BBDDC3 /* redButton.png */; };
+		D48AE7DB17A1E0D800BBDDC3 /* redButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48AE7D517A1E0D800BBDDC3 /* redButton@2x.png */; };
 		D4E69D0817A16FBE00C05ACE /* Edit-AddProductoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E69D0717A16FBE00C05ACE /* Edit-AddProductoViewController.m */; };
 		D4E69D0B17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E69D0A17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m */; };
 /* End PBXBuildFile section */
@@ -50,6 +56,12 @@
 		D44F906A17A0865B00BEA9DF /* ProductosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosViewController.m; sourceTree = "<group>"; };
 		D44F906C17A0867100BEA9DF /* DetalleProductoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleProductoViewController.h; sourceTree = "<group>"; };
 		D44F906D17A0867100BEA9DF /* DetalleProductoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleProductoViewController.m; sourceTree = "<group>"; };
+		D48AE7D017A1E0D800BBDDC3 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		D48AE7D117A1E0D800BBDDC3 /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		D48AE7D217A1E0D800BBDDC3 /* plainButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plainButton.png; sourceTree = "<group>"; };
+		D48AE7D317A1E0D800BBDDC3 /* plainButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plainButton@2x.png"; sourceTree = "<group>"; };
+		D48AE7D417A1E0D800BBDDC3 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		D48AE7D517A1E0D800BBDDC3 /* redButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redButton@2x.png"; sourceTree = "<group>"; };
 		D4E69D0617A16FBE00C05ACE /* Edit-AddProductoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Edit-AddProductoViewController.h"; sourceTree = "<group>"; };
 		D4E69D0717A16FBE00C05ACE /* Edit-AddProductoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Edit-AddProductoViewController.m"; sourceTree = "<group>"; };
 		D4E69D0917A17A1C00C05ACE /* Edit-AddCategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Edit-AddCategoriaViewController.h"; sourceTree = "<group>"; };
@@ -124,6 +136,7 @@
 		D44F904417A0738700BEA9DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D48AE7CC17A1DFBF00BBDDC3 /* images */,
 				D44F904517A0738700BEA9DF /* Inventario v_beta-Info.plist */,
 				D44F904617A0738700BEA9DF /* InfoPlist.strings */,
 				D44F904917A0738700BEA9DF /* main.m */,
@@ -133,6 +146,27 @@
 				D44F905317A0738700BEA9DF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D48AE7CC17A1DFBF00BBDDC3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D48AE7CF17A1E0D800BBDDC3 /* botones */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		D48AE7CF17A1E0D800BBDDC3 /* botones */ = {
+			isa = PBXGroup;
+			children = (
+				D48AE7D017A1E0D800BBDDC3 /* greenButton.png */,
+				D48AE7D117A1E0D800BBDDC3 /* greenButton@2x.png */,
+				D48AE7D217A1E0D800BBDDC3 /* plainButton.png */,
+				D48AE7D317A1E0D800BBDDC3 /* plainButton@2x.png */,
+				D48AE7D417A1E0D800BBDDC3 /* redButton.png */,
+				D48AE7D517A1E0D800BBDDC3 /* redButton@2x.png */,
+			);
+			path = botones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +226,12 @@
 				D44F905417A0738700BEA9DF /* Default-568h@2x.png in Resources */,
 				D44F905717A0738700BEA9DF /* MainStoryboard_iPhone.storyboard in Resources */,
 				D44F905A17A0738700BEA9DF /* MainStoryboard_iPad.storyboard in Resources */,
+				D48AE7D617A1E0D800BBDDC3 /* greenButton.png in Resources */,
+				D48AE7D717A1E0D800BBDDC3 /* greenButton@2x.png in Resources */,
+				D48AE7D817A1E0D800BBDDC3 /* plainButton.png in Resources */,
+				D48AE7D917A1E0D800BBDDC3 /* plainButton@2x.png in Resources */,
+				D48AE7DA17A1E0D800BBDDC3 /* redButton.png in Resources */,
+				D48AE7DB17A1E0D800BBDDC3 /* redButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

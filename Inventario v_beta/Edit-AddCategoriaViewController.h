@@ -10,5 +10,8 @@
 
 @interface Edit_AddCategoriaViewController : UITableViewController
 - (IBAction)cancel:(UIBarButtonItem *)sender;
+- (IBAction)done:(UIBarButtonItem *)sender;
+@property NSString *llamada;
+@property (weak, nonatomic) IBOutlet UIButton *botonEliminar;
 
 @end
