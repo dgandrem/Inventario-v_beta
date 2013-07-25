@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DetalleProductoViewController.h
 //  Inventario v_beta
 //
 //  Created by Diego Martinez on 24/07/13.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DetalleProductoViewController : UITableViewController
+- (IBAction)back:(UIBarButtonItem *)sender;
 
 @end

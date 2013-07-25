@@ -18,7 +18,12 @@
 		D44F905417A0738700BEA9DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D44F905317A0738700BEA9DF /* Default-568h@2x.png */; };
 		D44F905717A0738700BEA9DF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44F905517A0738700BEA9DF /* MainStoryboard_iPhone.storyboard */; };
 		D44F905A17A0738700BEA9DF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44F905817A0738700BEA9DF /* MainStoryboard_iPad.storyboard */; };
-		D44F905D17A0738700BEA9DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F905C17A0738700BEA9DF /* ViewController.m */; };
+		D44F906517A084DE00BEA9DF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906417A084DE00BEA9DF /* LoginViewController.m */; };
+		D44F906817A0850D00BEA9DF /* CategoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906717A0850D00BEA9DF /* CategoriasViewController.m */; };
+		D44F906B17A0865B00BEA9DF /* ProductosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906A17A0865B00BEA9DF /* ProductosViewController.m */; };
+		D44F906E17A0867100BEA9DF /* DetalleProductoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44F906D17A0867100BEA9DF /* DetalleProductoViewController.m */; };
+		D4E69D0817A16FBE00C05ACE /* Edit-AddProductoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E69D0717A16FBE00C05ACE /* Edit-AddProductoViewController.m */; };
+		D4E69D0B17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E69D0A17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +42,18 @@
 		D44F905317A0738700BEA9DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D44F905617A0738700BEA9DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D44F905917A0738700BEA9DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		D44F905B17A0738700BEA9DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D44F905C17A0738700BEA9DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D44F906317A084DE00BEA9DF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		D44F906417A084DE00BEA9DF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		D44F906617A0850D00BEA9DF /* CategoriasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriasViewController.h; path = ../CategoriasViewController.h; sourceTree = "<group>"; };
+		D44F906717A0850D00BEA9DF /* CategoriasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriasViewController.m; path = ../CategoriasViewController.m; sourceTree = "<group>"; };
+		D44F906917A0865B00BEA9DF /* ProductosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductosViewController.h; sourceTree = "<group>"; };
+		D44F906A17A0865B00BEA9DF /* ProductosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosViewController.m; sourceTree = "<group>"; };
+		D44F906C17A0867100BEA9DF /* DetalleProductoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleProductoViewController.h; sourceTree = "<group>"; };
+		D44F906D17A0867100BEA9DF /* DetalleProductoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleProductoViewController.m; sourceTree = "<group>"; };
+		D4E69D0617A16FBE00C05ACE /* Edit-AddProductoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Edit-AddProductoViewController.h"; sourceTree = "<group>"; };
+		D4E69D0717A16FBE00C05ACE /* Edit-AddProductoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Edit-AddProductoViewController.m"; sourceTree = "<group>"; };
+		D4E69D0917A17A1C00C05ACE /* Edit-AddCategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Edit-AddCategoriaViewController.h"; sourceTree = "<group>"; };
+		D4E69D0A17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Edit-AddCategoriaViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +100,22 @@
 		D44F904317A0738700BEA9DF /* Inventario v_beta */ = {
 			isa = PBXGroup;
 			children = (
+				D44F906317A084DE00BEA9DF /* LoginViewController.h */,
+				D44F906417A084DE00BEA9DF /* LoginViewController.m */,
+				D44F906617A0850D00BEA9DF /* CategoriasViewController.h */,
+				D44F906717A0850D00BEA9DF /* CategoriasViewController.m */,
+				D44F906917A0865B00BEA9DF /* ProductosViewController.h */,
+				D44F906A17A0865B00BEA9DF /* ProductosViewController.m */,
+				D44F906C17A0867100BEA9DF /* DetalleProductoViewController.h */,
+				D44F906D17A0867100BEA9DF /* DetalleProductoViewController.m */,
+				D4E69D0617A16FBE00C05ACE /* Edit-AddProductoViewController.h */,
+				D4E69D0717A16FBE00C05ACE /* Edit-AddProductoViewController.m */,
+				D4E69D0917A17A1C00C05ACE /* Edit-AddCategoriaViewController.h */,
+				D4E69D0A17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m */,
 				D44F904C17A0738700BEA9DF /* AppDelegate.h */,
 				D44F904D17A0738700BEA9DF /* AppDelegate.m */,
 				D44F905517A0738700BEA9DF /* MainStoryboard_iPhone.storyboard */,
 				D44F905817A0738700BEA9DF /* MainStoryboard_iPad.storyboard */,
-				D44F905B17A0738700BEA9DF /* ViewController.h */,
-				D44F905C17A0738700BEA9DF /* ViewController.m */,
 				D44F904417A0738700BEA9DF /* Supporting Files */,
 			);
 			path = "Inventario v_beta";
@@ -179,7 +204,12 @@
 			files = (
 				D44F904A17A0738700BEA9DF /* main.m in Sources */,
 				D44F904E17A0738700BEA9DF /* AppDelegate.m in Sources */,
-				D44F905D17A0738700BEA9DF /* ViewController.m in Sources */,
+				D44F906517A084DE00BEA9DF /* LoginViewController.m in Sources */,
+				D44F906817A0850D00BEA9DF /* CategoriasViewController.m in Sources */,
+				D44F906B17A0865B00BEA9DF /* ProductosViewController.m in Sources */,
+				D44F906E17A0867100BEA9DF /* DetalleProductoViewController.m in Sources */,
+				D4E69D0817A16FBE00C05ACE /* Edit-AddProductoViewController.m in Sources */,
+				D4E69D0B17A17A1C00C05ACE /* Edit-AddCategoriaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +342,7 @@
 				D44F906217A0738700BEA9DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
