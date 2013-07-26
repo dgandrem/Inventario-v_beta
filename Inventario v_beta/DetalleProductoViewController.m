@@ -118,14 +118,17 @@
     if( [controlador selectedSegmentIndex] == 0)
     {
         titulo = @"Unidades a disminuir:\n\n";
+        _accionStock = @"-";
     }
     else if([controlador selectedSegmentIndex ] == 1)
     {
         titulo = @"Cambiar valor de Stock a:\n\n";
+        _accionStock = @"set";
     }
     else if([controlador selectedSegmentIndex ] == 2)
     {
         titulo = @"Unidades a aumentar:\n\n";
+        _accionStock = @"+";
     }
     
     UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:titulo
@@ -140,5 +143,42 @@
     [myAlertView show];
 }
 
+-(void) alertView: (UIAlertView*) alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if( buttonIndex ==0)
+    {
+        [self.segmentedControlStock setSegmentedControlStyle:UISegmentedControlNoSegment];
+    }
+    else if(buttonIndex == 1)
+    {
+        UITextField *cuadroTexto= (UITextField *)[alertView viewWithTag:1000];
+        [self.segmentedControlStock setSelectedSegmentIndex:UISegmentedControlNoSegment];
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+        UITableViewCell* stock=  [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:2]];
+        
+        
+        NSNumber * numberFromAlert = [f numberFromString: cuadroTexto.text];
+        NSNumber * numberFromCell  = [f numberFromString: stock.textLabel.text];
+        
+        if( [_accionStock isEqualToString:@"-"])
+        {
+            stock.textLabel.text = [f stringFromNumber: [NSNumber numberWithInt:( -[numberFromAlert intValue] + [numberFromCell intValue])]];
+        }
+        else if([_accionStock isEqualToString:@"+"])
+        {
+            stock.textLabel.text = [f stringFromNumber: [NSNumber numberWithInt:([numberFromAlert intValue] + [numberFromCell intValue])]];
+        }
+        else if([_accionStock isEqualToString:@"set"])
+        {
+            stock.textLabel.text = [f stringFromNumber: numberFromAlert];
+        }
+        //Player *modified = [players objectAtIndex:currentRow];
+        //modified.name = [NSString stringWithString:texto.text];
+        //[players insertObject:modified atIndex:currentRow];
+        //[players removeObjectAtIndex:currentRow+1];
+        //[self.tableView reloadData];
+    }
+}
 
 @end

@@ -11,10 +11,12 @@
 @interface DetalleProductoViewController : UITableViewController
 
 @property NSString *nombreProducto; //cambiar por clase producto
-
+@property NSString *accionStock;
 
 - (IBAction)back:(UIBarButtonItem *)sender;
 - (IBAction)controlStock:(id)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControlStock;
+
 
 
 @end
