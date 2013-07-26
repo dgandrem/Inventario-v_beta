@@ -7,6 +7,8 @@
 //
 
 #import "ProductosViewController.h"
+#import "DetalleProductoViewController.h"
+#import "Edit-AddProductoViewController.h"
 
 @interface ProductosViewController ()
 
@@ -15,6 +17,8 @@
 @implementation ProductosViewController
 
 NSArray *searchResults;
+
+//Control Busqueda *****************************************************************************************
 
 -(void) filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
@@ -31,7 +35,43 @@ shouldReloadTableForSearchString:(NSString *)searchString
     return YES;
 }
 
+//CONTROL LOAD VIEW *****************************************************************************************
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
+    UINavigationController *dest = [segue destinationViewController];
+    UITableViewCell *cell = (UITableViewCell*) sender;
+    int row = cell.tag;
+    
+    if([segue.identifier isEqualToString:@"llamarDetalleProducto"])
+    {
+        
+        DetalleProductoViewController *ctrl = [[dest viewControllers] objectAtIndex:0];
+        
+        
+        if([self.searchDisplayController isActive])
+        {
+            ctrl.nombreProducto =  [searchResults objectAtIndex:row];
+            [self.searchDisplayController setActive:NO animated:NO];
+        }
+        else
+        {
+            ctrl.nombreProducto =  [_listaProductos objectAtIndex:row];
+        }
+        
+        [ctrl setTitle: ctrl.nombreProducto];
+
+        
+    }
+    else if([segue.identifier isEqualToString:@"AddProducto"])
+    {
+        Edit_AddProductoViewController* ctrl = [[dest viewControllers] objectAtIndex:0];
+        ctrl.caller = @"Add";
+        
+    }
+
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -82,6 +122,8 @@ shouldReloadTableForSearchString:(NSString *)searchString
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    [cell setTag:indexPath.row];
     if(tableView == self.searchDisplayController.searchResultsTableView)
         cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
     else

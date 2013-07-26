@@ -75,6 +75,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
     UINavigationController *dest = [segue destinationViewController];
     UITableViewCell *cell = (UITableViewCell*) sender;
     int row = cell.tag;
+    NSString *titulo;
     
     if([segue.identifier isEqualToString:@"llamarListaProductos"])
     {
@@ -86,11 +87,17 @@ shouldReloadTableForSearchString:(NSString *)searchString
         {
             ctrl.listaProductos =  [_ejemplo objectForKey:[searchResults objectAtIndex:row]];
             [self.searchDisplayController setActive:NO animated:NO];
+            titulo = [searchResults objectAtIndex:row];
+            
         }
         else
         {
             ctrl.listaProductos =  [_ejemplo objectForKey:[_keys objectAtIndex:row]];
+            titulo = [_keys objectAtIndex:row];
         }
+        
+        [ctrl setTitle:titulo];
+        
         
         
     }

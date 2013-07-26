@@ -56,7 +56,6 @@
         <!--Categorias View Controller - Lista de Categorias-->
         <scene sceneID="THe-z8-l34">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iaa-p9-toJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="R7K-xX-ZPt" customClass="CategoriasViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9SK-7L-OWa">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -115,6 +114,7 @@
                         <segue destination="992-CH-lEF" kind="modal" identifier="EditCategoria" id="LKh-Xh-Hdp"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaa-p9-toJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="bpb-3D-ebq">
                     <connections>
                         <outlet property="delegate" destination="R7K-xX-ZPt" id="5kH-3F-xPu"/>
@@ -273,7 +273,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="apZ-gg-7Uf" kind="modal" id="3oc-sX-GxK"/>
+                                    <segue destination="apZ-gg-7Uf" kind="modal" identifier="llamarDetalleProducto" id="3oc-sX-GxK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -321,8 +321,8 @@
                             <rect key="frame" x="0.0" y="433" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="Eliminar Producto">
-                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Eliminar Producto" backgroundImage="redButton.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="highlighted">
@@ -434,6 +434,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="GbI-Dk-bds"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="botonEliminar" destination="vh9-zY-aAI" id="E7V-C8-7H1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfl-Hw-Ogk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -640,7 +643,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="50t-HR-7Po"/>
         <segue reference="LKh-Xh-Hdp"/>
+        <segue reference="50t-HR-7Po"/>
     </inferredMetricsTieBreakers>
 </document>

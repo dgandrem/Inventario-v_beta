@@ -26,6 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if([_caller isEqualToString: @"Add"])
+    {
+        [self.botonEliminar setHidden: YES];
+    }
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,10 +38,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void) BackgroundTap: (id) sender
-{
-    [self.tableView resignFirstResponder];
-}
 
 - (void)didReceiveMemoryWarning
 {

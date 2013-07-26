@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DetalleProductoViewController : UITableViewController
+
+@property NSString *nombreProducto; //cambiar por clase producto
+
+
 - (IBAction)back:(UIBarButtonItem *)sender;
 - (IBAction)controlStock:(id)sender;
 

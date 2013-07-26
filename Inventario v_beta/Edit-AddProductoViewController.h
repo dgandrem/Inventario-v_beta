@@ -10,8 +10,10 @@
 
 @interface Edit_AddProductoViewController : UITableViewController
 
+
 @property NSString *caller;
 - (IBAction)cancel:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *botonEliminar;
 
 
 
