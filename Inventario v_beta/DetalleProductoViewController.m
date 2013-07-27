@@ -145,14 +145,13 @@
 
 -(void) alertView: (UIAlertView*) alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if( buttonIndex ==0)
-    {
-        [self.segmentedControlStock setSegmentedControlStyle:UISegmentedControlNoSegment];
-    }
-    else if(buttonIndex == 1)
+    
+    [self.segmentedControlStock setSelectedSegmentIndex:UISegmentedControlNoSegment];
+    
+    if(buttonIndex == 1)
     {
         UITextField *cuadroTexto= (UITextField *)[alertView viewWithTag:1000];
-        [self.segmentedControlStock setSelectedSegmentIndex:UISegmentedControlNoSegment];
+        
         NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
         [f setNumberStyle:NSNumberFormatterDecimalStyle];
         UITableViewCell* stock=  [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:2]];
